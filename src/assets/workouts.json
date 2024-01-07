@@ -1,0 +1,87 @@
+
+[
+    {
+        "date": "2024-02-01",
+        "workout": [
+            {
+                "title": "Peito",
+                "exercises": [
+                    {"name": "Subino reto maquina", "series": 3, "repetitions": 12, "weight": 35},
+                    {"name": "Subino inclinado maquina", "series": 3, "repetitions": 12, "weight": 30},
+                    {"name": "Fly", "series": 3, "repetitions": 12, "weight": 40},
+                    {"name": "Crossover", "series": 3, "repetitions": 12, "weight": 12.5},
+                    {"name": "Parallel machine", "series": 3, "repetitions": 12, "weight": 40}
+                ]
+            },
+            {
+                "title": "Pernas",
+                "exercises": [
+                    {"name": "Agachamento", "series": 4, "repetitions": 10, "weight": "15/20/25/30"},
+                    {"name": "Legpress 45", "series": 3, "repetitions": 10, "weight": 80},
+                    {"name": "Extensao", "series": 4, "repetitions": 10, "weight": 40}
+                ]
+            },
+            {
+                "title": "Costas",
+                "exercises": [
+                    {"name": "Puxada maquina pegada neutra", "series": 4, "repetitions": 10, "weight": "50/55/60/65"},
+                    {"name": "Remana maquina", "series": 3, "repetitions": 10, "weight": 35},
+                    {"name": "Remana alta com barra", "series": 3, "repetitions": 10, "weight": 10},
+                    {"name": "Pullover", "series": 3, "repetitions": 10, "weight": 25}
+                ]
+            },
+            {
+                "title": "Ombro e posterior",
+                "exercises": [
+                    {"name": "Desenvolvimento maquina", "series": 4, "repetitions": "15/12/10/10", "weight": "20/22.5/25/25"},
+                    {"name": "Elevacao lateral", "series": 4, "repetitions": 10, "weight": 8},
+                    {"name": "Stiff", "series": 3, "repetitions": 10, "weight": 10},
+                    {"name": "Elevacao pelvica", "series": 3, "repetitions": 10, "weight": 25},
+                    {"name": "Flexora", "series": 3, "repetitions": 10, "weight": 35}
+                ]
+            }
+        ]
+    },
+    {
+        "date": "2023-05-01",
+        "workout": [
+            {
+                "title": "Peito",
+                "exercises": [
+                    {"name": "Subino reto maquina", "series": 3, "repetitions": 12, "weight": 35},
+                    {"name": "Subino inclinado maquina", "series": 3, "repetitions": 12, "weight": 30},
+                    {"name": "Fly", "series": 3, "repetitions": 12, "weight": 40},
+                    {"name": "Crossover", "series": 3, "repetitions": 12, "weight": 12.5},
+                    {"name": "Parallel machine", "series": 3, "repetitions": 12, "weight": 40}
+                ]
+            },
+            {
+                "title": "Pernas",
+                "exercises": [
+                    {"name": "Agachamento", "series": 4, "repetitions": 10, "weight": "15/20/25/30"},
+                    {"name": "Legpress 45", "series": 3, "repetitions": 10, "weight": 80},
+                    {"name": "Extensao", "series": 4, "repetitions": 10, "weight": 40}
+                ]
+            },
+            {
+                "title": "Costas",
+                "exercises": [
+                    {"name": "Puxada maquina pegada neutra", "series": 4, "repetitions": 10, "weight": "50/55/60/65"},
+                    {"name": "Remana maquina", "series": 3, "repetitions": 10, "weight": 35},
+                    {"name": "Remana alta com barra", "series": 3, "repetitions": 10, "weight": 10},
+                    {"name": "Pullover", "series": 3, "repetitions": 10, "weight": 25}
+                ]
+            },
+            {
+                "title": "Ombro e posterior",
+                "exercises": [
+                    {"name": "Desenvolvimento maquina", "series": 4, "repetitions": "15/12/10/10", "weight": "20/22.5/25/25"},
+                    {"name": "Elevacao lateral", "series": 4, "repetitions": 10, "weight": 8},
+                    {"name": "Stiff", "series": 3, "repetitions": 10, "weight": 10},
+                    {"name": "Elevacao pelvica", "series": 3, "repetitions": 10, "weight": 25},
+                    {"name": "Flexora", "series": 3, "repetitions": 10, "weight": 35}
+                ]
+            }
+        ]
+    }
+]

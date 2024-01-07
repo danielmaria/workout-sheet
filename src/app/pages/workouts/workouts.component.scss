@@ -1,0 +1,12 @@
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+    text-decoration: underline;
+}
+
+.selected {
+  background-color: #f5f5f5;
+  text-decoration: underline;
+}
