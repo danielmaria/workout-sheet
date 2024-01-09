@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { WorkoutService } from './workout.service';
+import { WorkoutService } from './workout-sheet.service';
 
 describe('ExerciseService', () => {
   let service: WorkoutService;

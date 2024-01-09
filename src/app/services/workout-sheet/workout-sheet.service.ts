@@ -1,16 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, map } from 'rxjs';
+import { WorkoutSheet } from 'src/app/pages/workout-sheet/model/workout-sheet';
 
 @Injectable({
   providedIn: 'root',
 })
-export class WorkoutService {
-  private readonly exerciseUrl = 'assets/workouts.json';
+export class WorkoutSheetService {
+  private readonly exerciseUrl = 'assets/workouts-sheet.json';
 
   constructor(private http: HttpClient) {}
 
-  getLastWorkout(): Observable<any> {
+  getLastWorkout(): Observable<WorkoutSheet> {
     return this.http.get<any[]>(this.exerciseUrl).pipe(
       map((workouts) => {
         workouts.sort(

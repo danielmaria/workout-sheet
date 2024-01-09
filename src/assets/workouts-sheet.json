@@ -6,11 +6,11 @@
             {
                 "title": "Peito",
                 "exercises": [
-                    {"name": "Subino reto maquina", "series": 3, "repetitions": 12, "weight": 35},
-                    {"name": "Subino inclinado maquina", "series": 3, "repetitions": 12, "weight": 30},
-                    {"name": "Fly", "series": 3, "repetitions": 12, "weight": 40},
-                    {"name": "Crossover", "series": 3, "repetitions": 12, "weight": 12.5},
-                    {"name": "Parallel graviton", "series": 3, "repetitions": 12, "weight": 40}
+                    {"name": "Subino reto maquina", "series": 4, "repetitions": 12, "weight": 25},
+                    {"name": "Subino inclinado maquina", "series": 3, "repetitions": 12, "weight": 20},
+                    {"name": "Fly", "series": 3, "repetitions": 12, "weight": 35},
+                    {"name": "Supino inclinado com halteres", "series": 3, "repetitions": 12, "weight": 12},
+                    {"name": "Parallel graviton", "series": 3, "repetitions": 12, "weight": 25}
                 ]
             },
             {

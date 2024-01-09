@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { WorkoutsComponent } from './pages/workouts/workouts.component';
-import { HistoryComponent } from './pages/history/history.component';
 import { HomeComponent } from './pages/home/home.component';
 import { WorkoutSheetComponent } from './pages/workout-sheet/workout-sheet.component';
+import { EvaluationComponent } from './pages/evaluation/evaluation.component';
 
 const routes: Routes = [
   { path: 'workouts', component: WorkoutSheetComponent },
-  { path: 'history', component: HistoryComponent },
+  { path: 'evaluation', component: EvaluationComponent },
   { path: '', component: HomeComponent },
 ];
 

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { WorkoutService } from 'src/app/services/exercise/workout.service';
+import { WorkoutSheetService } from 'src/app/services/workout-sheet/workout-sheet.service';
 
 @Component({
   selector: 'app-workout-sheet',
@@ -12,7 +12,7 @@ export class WorkoutSheetComponent {
   selectedWorkout: any;
   isCollapsed: boolean[] = [];
 
-  constructor(private workoutService: WorkoutService) {
+  constructor(private workoutService: WorkoutSheetService) {
     this.workoutService.getLastWorkout().subscribe((data) => {
       this.workouts = data.workout;
     });

@@ -1,17 +1,39 @@
-<div>
-  <plotly-plot [data]="graphData" [layout]="graphLayout"></plotly-plot>
-</div>
-<div class="buttons-container mx-auto p-2">
-  <button class="btn btn-primary mx-2" (click)="redirectToWorkouts()">
-    <i class="fa fa-dumbbell"></i>
-    <p>Workouts</p>
-  </button>
-  <button class="btn btn-primary mx-2">
-    <i class="fa fa-star"></i>
-    <p>Evaluations</p>
-  </button>
-  <button class="btn btn-primary mx-2">
-    <i class="fa fa-history"></i>
-    <p>History</p>
-  </button>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <plotly-plot [data]="graphData" [layout]="graphLayout"></plotly-plot>
+    </div>
+    <div class="col-md-4">
+      <div class="row p-3">
+        <button class="btn btn-primary w-100" (click)="redirectTo('workouts')">
+          <i class="fa fa-dumbbell"></i>
+          <p>Workouts</p>
+        </button>
+      </div>
+      <div class="row p-3">
+        <button
+          class="btn btn-primary w-100"
+          (click)="redirectTo('evaluation')"
+        >
+          <i class="fa fa-star"></i>
+          <p>Evaluations</p>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="row">
+        <plotly-plot [data]="graphForExercisesVsVolumeData"></plotly-plot>
+      </div>
+      <div class="row">
+        <h3 class="text-center">Avisos</h3>
+        <p *ngFor="let warning of warning">- {{ warning }}</p>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <app-body-measurements></app-body-measurements>
+      <app-max-repetitions></app-max-repetitions>
+    </div>
+  </div>
 </div>
