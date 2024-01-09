@@ -1,0 +1,48 @@
+[
+{
+    "date": "2024-02-01",
+    "weight": "77.6",
+    "bodyMeasurement": [
+        { "name" : "Biceps", "value": 40},
+        { "name" : "Peito", "value": 90},
+        { "name" : "Barriga", "value": 60}
+    ],
+    "maxRepetitions": [
+        { "name" : "Supino", "weight": 40, "repetition": 15},
+        { "name" : "Puxada", "weight": 65, "repetition": 15},
+        { "name" : "Legpress", "weight": 100, "repetition": 15},
+        { "name" : "Desenvolvimento", "weight": 10, "repetition": 15}
+    ]
+},
+{
+    "date": "2024-01-01",
+    "weight": "77.6",
+    "bodyMeasurement": [
+        { "name" : "Biceps", "value": 39},
+        { "name" : "Peito", "value": 89},
+        { "name" : "Barriga", "value": 62}
+    ],
+    "maxRepetitions": [
+        { "name" : "Supino", "weight": 40, "repetition": 15},
+        { "name" : "Puxada", "weight": 65, "repetition": 15},
+        { "name" : "Legpress", "weight": 100, "repetition": 15},
+        { "name" : "Desenvolvimento", "weight": 10, "repetition": 15}
+    ]
+},
+{
+    "date": "2023-12-01",
+    "weight": "77.6",
+    "bodyMeasurement": [
+        { "name" : "Biceps", "value": 39},
+        { "name" : "Peito", "value": 85},
+        { "name" : "Barriga", "value": 65}
+    ],
+    "maxRepetitions": [
+        { "name" : "Supino", "weight": 40, "repetition": 15},
+        { "name" : "Puxada", "weight": 65, "repetition": 15},
+        { "name" : "Legpress", "weight": 100, "repetition": 15},
+        { "name" : "Desenvolvimento", "weight": 10, "repetition": 15}
+    ]
+}
+
+]
