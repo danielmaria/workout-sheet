@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { Layout, PlotData } from 'plotly.js';
 import { Evaluation } from 'src/app/pages/evaluation/model/evaluation';
 import { EvaluationService } from 'src/app/services/evaluation/evaluation.service';
@@ -8,35 +8,19 @@ import { EvaluationService } from 'src/app/services/evaluation/evaluation.servic
   templateUrl: './body-measurements.component.html',
   styleUrls: ['./body-measurements.component.scss'],
 })
-export class BodyMeasurementsComponent implements OnInit {
-  evaluations: Evaluation[] = [];
+export class BodyMeasurementsComponent implements OnChanges {
+  @Input() evaluations: Evaluation[] = [];
+
   plotData: any[] = [];
   layout: Partial<Layout> = {
     title: 'Medições Corporais ao Longo do Tempo',
-    xaxis: {
-      title: 'Datas',
-    },
     yaxis: {
-      title: 'Valores',
+      title: 'Valores em cm',
     },
   };
 
-  constructor(private evaluationService: EvaluationService) {}
-
-  ngOnInit() {
-    this.fetchEvaluations();
-  }
-
-  fetchEvaluations() {
-    this.evaluationService.getEvaluations().subscribe(
-      (data: Evaluation[]) => {
-        this.evaluations = data;
-        this.createChart();
-      },
-      (error) => {
-        console.error('Error fetching evaluations', error);
-      }
-    );
+  ngOnChanges() {
+    this.createChart();
   }
 
   createChart() {
@@ -56,7 +40,7 @@ export class BodyMeasurementsComponent implements OnInit {
 
   getUniqueMeasurements(): string[] {
     const uniqueMeasurements: string[] = [];
-    this.evaluations.forEach((evaluation) => {
+    this.evaluations?.forEach((evaluation) => {
       evaluation.bodyMeasurement.forEach((body) => {
         if (!uniqueMeasurements.includes(body.name)) {
           uniqueMeasurements.push(body.name);
@@ -67,12 +51,12 @@ export class BodyMeasurementsComponent implements OnInit {
   }
 
   getUniqueDates(): Date[] {
-    return this.evaluations.map((evaluation) => evaluation.date);
+    return this.evaluations?.map((evaluation) => evaluation.date);
   }
 
   getDataForMeasurement(measurementName: string): number[] {
     const data: number[] = [];
-    this.evaluations.forEach((evaluation) => {
+    this.evaluations?.forEach((evaluation) => {
       const measurement = evaluation.bodyMeasurement.find(
         (body) => body.name === measurementName
       );

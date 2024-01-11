@@ -14,6 +14,9 @@ import { EvaluationTableComponent } from './pages/evaluation/components/evaluati
 import { WorkoutsComponent } from './pages/workout-sheet/components/workouts/workouts.component';
 import { BodyMeasurementsComponent } from './pages/home/components/charts/body-measurements/body-measurements.component';
 import { MaxRepetitionsComponent } from './pages/home/components/charts/max-repetitions/max-repetitions.component';
+import { WarningsComponent } from './pages/home/components/warnings/warnings.component';
+import { PieExerciseVolumeComponent } from './pages/home/components/charts/pie-exercise-volume/pie-exercise-volume.component';
+import { IntensityVolumeComponent } from './pages/home/components/charts/intensity-volume/intensity-volume.component';
 
 PlotlyModule.plotlyjs = PlotlyJS;
 
@@ -27,6 +30,9 @@ PlotlyModule.plotlyjs = PlotlyJS;
     EvaluationTableComponent,
     BodyMeasurementsComponent,
     MaxRepetitionsComponent,
+    WarningsComponent,
+    PieExerciseVolumeComponent,
+    IntensityVolumeComponent,
   ],
   imports: [
     BrowserModule,

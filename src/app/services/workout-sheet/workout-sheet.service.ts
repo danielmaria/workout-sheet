@@ -7,13 +7,26 @@ import { WorkoutSheet } from 'src/app/pages/workout-sheet/model/workout-sheet';
   providedIn: 'root',
 })
 export class WorkoutSheetService {
-  private readonly exerciseUrl = 'assets/workouts-sheet.json';
+  private readonly workoutsUrl = 'assets/workouts-sheet.json';
 
   constructor(private http: HttpClient) {}
 
-  getLastWorkout(): Observable<WorkoutSheet> {
-    return this.http.get<any[]>(this.exerciseUrl).pipe(
+  getActualWorkout(): Observable<WorkoutSheet> {
+    return this.http.get<any[]>(this.workoutsUrl).pipe(
       map((workouts) => {
+        const currentDate = new Date();
+
+        const futureWorkouts = workouts.filter(
+          (workout) => new Date(workout.date) >= currentDate
+        );
+
+        if (futureWorkouts.length > 0) {
+          futureWorkouts.sort(
+            (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+          );
+          return futureWorkouts[0];
+        }
+
         workouts.sort(
           (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
         );
@@ -23,6 +36,6 @@ export class WorkoutSheetService {
   }
 
   getWorkouts(): Observable<any[]> {
-    return this.http.get<any[]>(this.exerciseUrl);
+    return this.http.get<any[]>(this.workoutsUrl);
   }
 }

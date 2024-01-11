@@ -21,6 +21,7 @@ export interface Workout {
 }
 
 export interface WorkoutSheet {
+  notes: string;
   date: string;
   workout: Workout[];
 }

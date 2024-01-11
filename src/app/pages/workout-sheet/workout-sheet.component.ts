@@ -7,13 +7,14 @@ import { WorkoutSheetService } from 'src/app/services/workout-sheet/workout-shee
   styleUrls: ['./workout-sheet.component.scss'],
 })
 export class WorkoutSheetComponent {
+  today = new Date();
   allWorkouts: any[] = [];
   workouts: any[] = [];
   selectedWorkout: any;
   isCollapsed: boolean[] = [];
 
   constructor(private workoutService: WorkoutSheetService) {
-    this.workoutService.getLastWorkout().subscribe((data) => {
+    this.workoutService.getActualWorkout().subscribe((data) => {
       this.workouts = data.workout;
     });
   }
@@ -21,7 +22,6 @@ export class WorkoutSheetComponent {
   ngOnInit(): void {
     this.loadExercises();
     this.workoutService.getWorkouts().subscribe((data) => {
-      data.shift();
       this.allWorkouts = data;
       data.forEach(() => {
         this.isCollapsed.push(true);
@@ -30,7 +30,7 @@ export class WorkoutSheetComponent {
   }
 
   loadExercises(): void {
-    this.workoutService.getLastWorkout().subscribe((data) => {
+    this.workoutService.getActualWorkout().subscribe((data) => {
       this.workouts = data.workout;
     });
   }

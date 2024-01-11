@@ -2,10 +2,10 @@ export interface Evaluation {
   date: Date;
   weight: number;
   bodyMeasurement: BodyMeasurement[];
-  maxRepetitions: ExerciseEvaluation[];
+  maxRepetitions: ExerciseMark[];
 }
 
-export interface ExerciseEvaluation {
+export interface ExerciseMark {
   name: string;
   weight: number;
   repetition: number;

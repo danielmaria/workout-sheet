@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { Layout } from 'plotly.js';
 import { Evaluation } from 'src/app/pages/evaluation/model/evaluation';
 import { EvaluationService } from 'src/app/services/evaluation/evaluation.service';
@@ -8,9 +8,9 @@ import { EvaluationService } from 'src/app/services/evaluation/evaluation.servic
   templateUrl: './max-repetitions.component.html',
   styleUrls: ['./max-repetitions.component.scss'],
 })
-export class MaxRepetitionsComponent implements OnInit {
+export class MaxRepetitionsComponent implements OnChanges {
   @Input() evaluations: Evaluation[] = [];
-  plotData: any[] = []; // Alterando para any[] por questões de tipagem
+  plotData: any[] = [];
   layout: Partial<Layout> = {
     title: 'Medições Corporais ao Longo do Tempo',
     xaxis: {
@@ -21,38 +21,32 @@ export class MaxRepetitionsComponent implements OnInit {
     },
   };
 
-  constructor(private evaluationService: EvaluationService) {}
-
-  ngOnInit() {
+  ngOnChanges(): void {
     this.createChart();
   }
 
   createChart() {
-    this.evaluationService.getEvaluations().subscribe((e) => {
-      this.evaluations = e;
+    const uniqueExercises = this.getUniqueExercises();
+    const uniqueDates = this.getUniqueDates();
 
-      const uniqueExercises = this.getUniqueExercises();
-      const uniqueDates = this.getUniqueDates();
-
-      uniqueExercises.forEach((exercise) => {
-        const trace = {
-          x: uniqueDates.map((date) => new Date(date)),
-          y: this.getDataForExercise(exercise),
-          mode: 'lines+markers',
-          name: exercise,
-        };
-        this.plotData.push(trace);
-      });
+    uniqueExercises?.forEach((exercise) => {
+      const trace = {
+        x: uniqueDates.map((date) => new Date(date)),
+        y: this.getDataForExercise(exercise),
+        mode: 'lines+markers',
+        name: exercise,
+      };
+      this.plotData.push(trace);
     });
   }
 
   getUniqueDates(): Date[] {
-    return this.evaluations.map((evaluation) => evaluation.date);
+    return this.evaluations?.map((evaluation) => evaluation.date);
   }
 
   getUniqueExercises(): string[] {
     const uniqueExercises: string[] = [];
-    this.evaluations.forEach((evaluation) => {
+    this.evaluations?.forEach((evaluation) => {
       evaluation.maxRepetitions.forEach((repetition) => {
         if (!uniqueExercises.includes(repetition.name)) {
           uniqueExercises.push(repetition.name);
@@ -64,7 +58,7 @@ export class MaxRepetitionsComponent implements OnInit {
 
   getDataForExercise(exerciseName: string): number[] {
     const data: number[] = [];
-    this.evaluations.forEach((evaluation) => {
+    this.evaluations?.forEach((evaluation) => {
       const exercise = evaluation.maxRepetitions.find(
         (repetition) => repetition.name === exerciseName
       );

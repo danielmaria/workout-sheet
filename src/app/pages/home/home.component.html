@@ -1,7 +1,10 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8">
-      <plotly-plot [data]="graphData" [layout]="graphLayout"></plotly-plot>
+      <app-intensity-volume
+        [workouts]="workouts"
+        [evaluations]="allEvaluations"
+      ></app-intensity-volume>
     </div>
     <div class="col-md-4">
       <div class="row p-3">
@@ -24,16 +27,17 @@
   <div class="row">
     <div class="col-md-4">
       <div class="row">
-        <plotly-plot [data]="graphForExercisesVsVolumeData"></plotly-plot>
+        <app-pie-exercise-volume
+          [actualWorkout]="actualWorkout"
+        ></app-pie-exercise-volume>
       </div>
-      <div class="row">
-        <h3 class="text-center">Avisos</h3>
-        <p *ngFor="let warning of warning">- {{ warning }}</p>
-      </div>
+      <app-warnings [warnings]="warnings"></app-warnings>
     </div>
     <div class="col-md-8">
-      <app-body-measurements></app-body-measurements>
-      <app-max-repetitions></app-max-repetitions>
+      <app-body-measurements
+        [evaluations]="allEvaluations"
+      ></app-body-measurements>
+      <app-max-repetitions [evaluations]="allEvaluations"></app-max-repetitions>
     </div>
   </div>
 </div>
