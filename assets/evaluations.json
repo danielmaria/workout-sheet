@@ -1,48 +1,116 @@
 [
-{
-    "date": "2024-02-01",
-    "weight": "77.6",
-    "bodyMeasurement": [
-        { "name" : "Biceps", "value": 40},
-        { "name" : "Peito", "value": 90},
-        { "name" : "Barriga", "value": 60}
-    ],
-    "maxRepetitions": [
-        { "name" : "Supino", "weight": 40, "repetition": 15},
-        { "name" : "Puxada", "weight": 65, "repetition": 15},
-        { "name" : "Legpress", "weight": 100, "repetition": 15},
-        { "name" : "Desenvolvimento", "weight": 10, "repetition": 15}
-    ]
-},
-{
-    "date": "2024-01-01",
-    "weight": "77.6",
-    "bodyMeasurement": [
-        { "name" : "Biceps", "value": 39},
-        { "name" : "Peito", "value": 89},
-        { "name" : "Barriga", "value": 62}
-    ],
-    "maxRepetitions": [
-        { "name" : "Supino", "weight": 40, "repetition": 15},
-        { "name" : "Puxada", "weight": 65, "repetition": 15},
-        { "name" : "Legpress", "weight": 100, "repetition": 15},
-        { "name" : "Desenvolvimento", "weight": 10, "repetition": 15}
-    ]
-},
-{
-    "date": "2023-12-01",
-    "weight": "77.6",
-    "bodyMeasurement": [
-        { "name" : "Biceps", "value": 39},
-        { "name" : "Peito", "value": 85},
-        { "name" : "Barriga", "value": 65}
-    ],
-    "maxRepetitions": [
-        { "name" : "Supino", "weight": 40, "repetition": 15},
-        { "name" : "Puxada", "weight": 65, "repetition": 15},
-        { "name" : "Legpress", "weight": 100, "repetition": 15},
-        { "name" : "Desenvolvimento", "weight": 10, "repetition": 15}
-    ]
-}
-
+    {
+        "date": "2024-02-01",
+        "notes" : "Volta após 25 dias sem treino",
+        "weight": "77.6",
+        "bodyMeasurement": [
+            { "name" : "Biceps", "value": 40},
+            { "name" : "Peito", "value": 90},
+            { "name" : "Cintura", "value": 65},
+            { "name" : "Quadril", "value": 95},
+            { "name" : "Coxa", "value": 55},
+            { "name" : "Panturrilha", "value": 38}
+        ],
+        "maxRepetitions": [
+            { "name" : "Supino reto maquina", "weight": 55, "repetition": 15},
+            { "name" : "Puxada maquina pegada neutra", "weight": 75, "repetition": 15},
+            { "name" : "Legpress 45", "weight": 100, "repetition": 15},
+            { "name" : "Desenvolvimento", "weight": 10, "repetition": 15}
+        ]
+    },
+    {
+        "date": "2024-01-01",
+        "notes" : "Foco máximo",
+        "weight": "78.0",
+        "bodyMeasurement": [
+            { "name" : "Biceps", "value": 41},
+            { "name" : "Peito", "value": 91},
+            { "name" : "Cintura", "value": 64},
+            { "name" : "Quadril", "value": 94},
+            { "name" : "Coxa", "value": 54},
+            { "name" : "Panturrilha", "value": 37}
+        ],
+        "maxRepetitions": [
+            { "name" : "Supino reto maquina", "weight": 50, "repetition": 13},
+            { "name" : "Puxada maquina pegada neutra", "weight": 75, "repetition": 15},
+            { "name" : "Legpress 45", "weight": 120, "repetition": 12},
+            { "name" : "Desenvolvimento", "weight": 25, "repetition": 12}
+        ]
+    },
+    {
+        "date": "2023-12-01",
+        "notes" : "",
+        "weight": "78.5",
+        "bodyMeasurement": [
+            { "name" : "Biceps", "value": 42},
+            { "name" : "Peito", "value": 92},
+            { "name" : "Cintura", "value": 63},
+            { "name" : "Quadril", "value": 93},
+            { "name" : "Coxa", "value": 53},
+            { "name" : "Panturrilha", "value": 36}
+        ],
+        "maxRepetitions": [
+            { "name" : "Supino reto maquina", "weight": 50, "repetition": 15},
+            { "name" : "Puxada maquina pegada neutra", "weight": 75, "repetition": 14},
+            { "name" : "Legpress 45", "weight": 110, "repetition": 14},
+            { "name" : "Desenvolvimento", "weight": 20, "repetition": 15}
+        ]
+    },
+    {
+        "date": "2023-11-01",
+        "notes" : "",
+        "weight": "79.0",
+        "bodyMeasurement": [
+            { "name" : "Biceps", "value": 43},
+            { "name" : "Peito", "value": 94},
+            { "name" : "Cintura", "value": 62},
+            { "name" : "Quadril", "value": 92},
+            { "name" : "Coxa", "value": 52},
+            { "name" : "Panturrilha", "value": 35}
+        ],
+        "maxRepetitions": [
+            { "name" : "Supino reto maquina", "weight": 55, "repetition": 14},
+            { "name" : "Puxada maquina pegada neutra", "weight": 70, "repetition": 15},
+            { "name" : "Legpress 45", "weight": 110, "repetition": 14},
+            { "name" : "Desenvolvimento", "weight": 20, "repetition": 14}
+        ]
+    },
+    {
+        "date": "2023-10-01",
+        "notes" : "",
+        "weight": "79.5",
+        "bodyMeasurement": [
+            { "name" : "Biceps", "value": 44},
+            { "name" : "Peito", "value": 96},
+            { "name" : "Cintura", "value": 61},
+            { "name" : "Quadril", "value": 91},
+            { "name" : "Coxa", "value": 51},
+            { "name" : "Panturrilha", "value": 34}
+        ],
+        "maxRepetitions": [
+            { "name" : "Supino reto maquina", "weight": 50, "repetition": 12},
+            { "name" : "Puxada maquina pegada neutra", "weight": 70, "repetition": 12},
+            { "name" : "Legpress 45", "weight": 100, "repetition": 13},
+            { "name" : "Desenvolvimento", "weight": 18, "repetition": 11}
+        ]
+    },
+    {
+        "date": "2023-07-01",
+        "notes" : "",
+        "weight": "79.5",
+        "bodyMeasurement": [
+            { "name" : "Biceps", "value": 44},
+            { "name" : "Peito", "value": 96},
+            { "name" : "Cintura", "value": 61},
+            { "name" : "Quadril", "value": 91},
+            { "name" : "Coxa", "value": 51},
+            { "name" : "Panturrilha", "value": 34}
+        ],
+        "maxRepetitions": [
+            { "name" : "Supino reto maquina", "weight": 50, "repetition": 12},
+            { "name" : "Puxada maquina pegada neutra", "weight": 70, "repetition": 12},
+            { "name" : "Legpress 45", "weight": 100, "repetition": 13},
+            { "name" : "Desenvolvimento", "weight": 18, "repetition": 11}
+        ]
+    }
 ]
