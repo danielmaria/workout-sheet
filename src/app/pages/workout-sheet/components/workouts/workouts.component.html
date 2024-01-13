@@ -1,34 +1,52 @@
-<div class="container mt-5">
-  <div id="titles-container" class="mb-3">
-    <div class="row">
-      <div
-        *ngFor="let workout of workouts"
-        class="col mx-3 clickable text-center"
-        (click)="populateTable(workout)"
-      >
-        {{ workout.title }}
+<div class="container my-5 px-0">
+  <h1 class="text-center title-name py-2 mb-0">Workout Sheet</h1>
+  <div class="title-container">
+    <div id="titles-container" class="mb-3 mx-0">
+      <div class="row mx-0">
+        <div
+          *ngFor="let workout of workouts"
+          class="col py-2 clickable text-center d-grid align-items-center"
+          (click)="populateTable(workout)"
+          [ngClass]="{
+            'selected-workout': selectedWorkout?.title === workout.title
+          }"
+        >
+          {{ workout.title }}
+        </div>
       </div>
     </div>
-  </div>
-  <div id="table-container" *ngIf="selectedWorkout">
-    <h2 class="text-center">{{ selectedWorkout.title }}</h2>
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th>Exercício</th>
-          <th>Séries</th>
-          <th>Repetições</th>
-          <th>Carga</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let exerciseDetail of selectedWorkout.exercises">
-          <td>{{ exerciseDetail.name }}</td>
-          <td>{{ exerciseDetail.series || "-" }}</td>
-          <td>{{ exerciseDetail.repetitions || "-" }}</td>
-          <td>{{ exerciseDetail.weight || "-" }}</td>
-        </tr>
-      </tbody>
-    </table>
+    <div id="table-container" *ngIf="selectedWorkout">
+      <h2 class="text-center">{{ selectedWorkout.title }}</h2>
+      <div class="px-3">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Exercício</th>
+              <th>Séries</th>
+              <th>Repetições</th>
+              <th>Carga</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              *ngFor="
+                let exerciseDetail of selectedWorkout.exercises;
+                let i = index
+              "
+              (click)="toggleRow(i)"
+              [ngClass]="{ strikethrough: clickedRowIndices.has(i) }"
+            >
+              <td>
+                {{ clickedRowIndices.has(i) ? "✅" : "" }}
+                {{ exerciseDetail.name }}
+              </td>
+              <td>{{ exerciseDetail.series || "-" }}</td>
+              <td>{{ exerciseDetail.repetitions || "-" }}</td>
+              <td>{{ exerciseDetail.weight || "-" }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </div>

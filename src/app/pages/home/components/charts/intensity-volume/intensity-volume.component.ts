@@ -6,11 +6,12 @@ import {
   Workout,
   WorkoutSheet,
 } from 'src/app/pages/workout-sheet/model/workout-sheet';
+
+import { CalcOneMaximumRepetition } from 'src/app/shared/calc/one-maximum-repetition';
 import {
   Evaluation,
   ExerciseMark,
-} from 'src/app/pages/evaluation/model/evaluation';
-import { CalcOneMaximumRepetition } from 'src/app/shared/calc/one-maximum-repetition';
+} from 'src/app/services/evaluation/model/evaluation';
 
 @Component({
   selector: 'app-intensity-volume',
@@ -29,6 +30,11 @@ export class IntensityVolumeComponent implements OnChanges {
     },
     yaxis: {
       title: 'Volume',
+    },
+    legend: {
+      orientation: 'h',
+      x: 0,
+      y: -0.05,
     },
   };
 

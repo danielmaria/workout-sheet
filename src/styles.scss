@@ -2,3 +2,17 @@
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+
+.title-name {
+    color: white;
+    background-color: black;
+    padding: 4px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.title-container {
+    border: 1px solid black;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}

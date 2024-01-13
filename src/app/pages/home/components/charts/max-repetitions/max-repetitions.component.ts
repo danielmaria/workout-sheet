@@ -1,7 +1,6 @@
-import { Component, Input, OnChanges, OnInit } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 import { Layout } from 'plotly.js';
-import { Evaluation } from 'src/app/pages/evaluation/model/evaluation';
-import { EvaluationService } from 'src/app/services/evaluation/evaluation.service';
+import { Evaluation } from 'src/app/services/evaluation/model/evaluation';
 
 @Component({
   selector: 'app-max-repetitions',
@@ -12,12 +11,14 @@ export class MaxRepetitionsComponent implements OnChanges {
   @Input() evaluations: Evaluation[] = [];
   plotData: any[] = [];
   layout: Partial<Layout> = {
-    title: 'Medições Corporais ao Longo do Tempo',
-    xaxis: {
-      title: 'Datas',
-    },
+    title: 'Repetições Máximas',
     yaxis: {
       title: 'Valores',
+    },
+    legend: {
+      orientation: 'h',
+      x: 0,
+      y: -0.1,
     },
   };
 

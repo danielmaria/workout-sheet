@@ -1,4 +1,4 @@
-import { ExerciseMark } from 'src/app/pages/evaluation/model/evaluation';
+import { ExerciseMark } from 'src/app/services/evaluation/model/evaluation';
 
 export class CalcOneMaximumRepetition {
   // Função para calcular 1RM usando a fórmula de Brzycki

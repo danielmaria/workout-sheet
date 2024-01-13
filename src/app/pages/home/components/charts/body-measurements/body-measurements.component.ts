@@ -1,7 +1,6 @@
 import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { Layout, PlotData } from 'plotly.js';
-import { Evaluation } from 'src/app/pages/evaluation/model/evaluation';
-import { EvaluationService } from 'src/app/services/evaluation/evaluation.service';
+import { Evaluation } from 'src/app/services/evaluation/model/evaluation';
 
 @Component({
   selector: 'app-body-measurements',
@@ -13,9 +12,14 @@ export class BodyMeasurementsComponent implements OnChanges {
 
   plotData: any[] = [];
   layout: Partial<Layout> = {
-    title: 'Medições Corporais ao Longo do Tempo',
+    title: 'Medições Corporais',
     yaxis: {
       title: 'Valores em cm',
+    },
+    legend: {
+      orientation: 'h',
+      x: 0,
+      y: -0.1,
     },
   };
 

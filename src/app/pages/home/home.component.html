@@ -1,43 +1,52 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-8">
-      <app-intensity-volume
-        [workouts]="workouts"
-        [evaluations]="allEvaluations"
-      ></app-intensity-volume>
-    </div>
-    <div class="col-md-4">
-      <div class="row p-3">
-        <button class="btn btn-primary w-100" (click)="redirectTo('workouts')">
-          <i class="fa fa-dumbbell"></i>
-          <p>Workouts</p>
-        </button>
+<div class="container my-5">
+  <h1 class="text-center title-name py-2 mb-0">Workout Sheet</h1>
+
+  <div class="title-container p-3">
+    <div class="row">
+      <div class="col-md-8 col-sm-12">
+        <app-intensity-volume
+          [workouts]="workouts"
+          [evaluations]="allEvaluations"
+        ></app-intensity-volume>
       </div>
-      <div class="row p-3">
-        <button
-          class="btn btn-primary w-100"
-          (click)="redirectTo('evaluation')"
-        >
-          <i class="fa fa-star"></i>
-          <p>Evaluations</p>
-        </button>
+      <div class="col-md-4 col-sm-12">
+        <div class="row p-3 mx-auto">
+          <button
+            class="btn btn-primary w-100"
+            (click)="redirectTo('workouts')"
+          >
+            <i class="fa fa-dumbbell"></i>
+            <p>Workouts</p>
+          </button>
+        </div>
+        <div class="row p-3 mx-auto">
+          <button
+            class="btn btn-primary w-100"
+            (click)="redirectTo('evaluation')"
+          >
+            <i class="fa fa-star"></i>
+            <p>Evaluations</p>
+          </button>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-md-4">
-      <div class="row">
-        <app-pie-exercise-volume
-          [actualWorkout]="actualWorkout"
-        ></app-pie-exercise-volume>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="row">
+          <app-pie-exercise-volume
+            [actualWorkout]="actualWorkout"
+          ></app-pie-exercise-volume>
+        </div>
+        <app-warnings [warnings]="warnings"></app-warnings>
       </div>
-      <app-warnings [warnings]="warnings"></app-warnings>
-    </div>
-    <div class="col-md-8">
-      <app-body-measurements
-        [evaluations]="allEvaluations"
-      ></app-body-measurements>
-      <app-max-repetitions [evaluations]="allEvaluations"></app-max-repetitions>
+      <div class="col-md-8">
+        <app-body-measurements
+          [evaluations]="allEvaluations"
+        ></app-body-measurements>
+        <app-max-repetitions
+          [evaluations]="allEvaluations"
+        ></app-max-repetitions>
+      </div>
     </div>
   </div>
 </div>

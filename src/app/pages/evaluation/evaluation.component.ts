@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { EvaluationService } from 'src/app/services/evaluation/evaluation.service';
-import { Evaluation } from './model/evaluation';
+import { Evaluation } from 'src/app/services/evaluation/model/evaluation';
 
 @Component({
   selector: 'app-evaluation',

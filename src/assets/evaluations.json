@@ -99,17 +99,17 @@
         "notes" : "",
         "weight": "79.5",
         "bodyMeasurement": [
-            { "name" : "Biceps", "value": 44},
-            { "name" : "Peito", "value": 96},
-            { "name" : "Cintura", "value": 61},
-            { "name" : "Quadril", "value": 91},
+            { "name" : "Biceps", "value": 43},
+            { "name" : "Peito", "value": 97},
+            { "name" : "Cintura", "value": 58},
+            { "name" : "Quadril", "value": 90},
             { "name" : "Coxa", "value": 51},
-            { "name" : "Panturrilha", "value": 34}
+            { "name" : "Panturrilha", "value": 35}
         ],
         "maxRepetitions": [
-            { "name" : "Supino reto maquina", "weight": 50, "repetition": 12},
+            { "name" : "Supino reto maquina", "weight": 52, "repetition": 12},
             { "name" : "Puxada maquina pegada neutra", "weight": 70, "repetition": 12},
-            { "name" : "Legpress 45", "weight": 100, "repetition": 13},
+            { "name" : "Legpress 45", "weight": 90, "repetition": 13},
             { "name" : "Desenvolvimento", "weight": 18, "repetition": 11}
         ]
     }

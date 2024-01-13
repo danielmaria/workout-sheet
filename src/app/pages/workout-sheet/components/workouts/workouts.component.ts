@@ -8,10 +8,20 @@ import { Component, Input } from '@angular/core';
 export class WorkoutsComponent {
   @Input() workouts: any[] = [];
   selectedWorkout: any;
+  clickedRowIndices: Set<number> = new Set<number>();
 
   constructor() {}
 
-  populateTable(exercise: any): void {
-    this.selectedWorkout = exercise;
+  populateTable(selectedWorkout: any): void {
+    this.selectedWorkout = selectedWorkout;
+    this.clickedRowIndices.clear();
+  }
+
+  toggleRow(index: number) {
+    if (this.clickedRowIndices.has(index)) {
+      this.clickedRowIndices.delete(index);
+    } else {
+      this.clickedRowIndices.add(index);
+    }
   }
 }

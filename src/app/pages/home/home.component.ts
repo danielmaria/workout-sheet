@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { WorkoutSheetService } from 'src/app/services/workout-sheet/workout-sheet.service';
-import { Exercise, WorkoutSheet } from '../workout-sheet/model/workout-sheet';
-import { Evaluation } from '../evaluation/model/evaluation';
-import { CalcVolume } from 'src/app/shared/calc/calc-volume';
+import { WorkoutSheet } from '../workout-sheet/model/workout-sheet';
 import { EvaluationService } from 'src/app/services/evaluation/evaluation.service';
+import { Evaluation } from 'src/app/services/evaluation/model/evaluation';
 
 export interface GraphData {
   x?: string[];
@@ -40,6 +39,7 @@ export class HomeComponent {
     });
     this.evaluationService.getEvaluations().subscribe((evaluations) => {
       this.allEvaluations = evaluations;
+      this.checkIfEvaluationIsUpToDate();
     });
   }
 
@@ -62,6 +62,22 @@ export class HomeComponent {
     }
 
     this.warnings.push(message);
+  }
+
+  private checkIfEvaluationIsUpToDate() {
+    const lastEvaluation = this.allEvaluations
+      .slice()
+      .sort((a, b) => {
+        return Date.parse(a.date.toString()) - Date.parse(b.date.toString());
+      })
+      .pop();
+    if (
+      lastEvaluation &&
+      new Date(lastEvaluation.date).getTime() <
+        new Date().getTime() - 30 * 24 * 60 * 60 * 1000
+    ) {
+      this.warnings.push('Você está com uma avaliação desatualizada (1 mês).');
+    }
   }
 
   redirectTo(src: string) {

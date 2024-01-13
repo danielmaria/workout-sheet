@@ -10,3 +10,12 @@
   background-color: #f5f5f5;
   text-decoration: underline;
 }
+.strikethrough {
+  text-decoration: line-through;
+}
+
+.selected-workout {
+  background-color: black;
+  color: white;
+  font-weight: 500;
+}
