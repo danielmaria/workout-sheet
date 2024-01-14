@@ -25,12 +25,7 @@ export class IntensityVolumeComponent implements OnChanges {
 
   graphLayout = {
     title: 'Gráfico de Intensidade e Volume',
-    xaxis: {
-      title: 'Tempo',
-    },
-    yaxis: {
-      title: 'Volume',
-    },
+
     legend: {
       orientation: 'h',
       x: 0,
