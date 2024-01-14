@@ -35,13 +35,13 @@
           <b>{{ max.name }}: </b>
         </div>
         <div class="row p-3 exercise-container">
-          <div class="col text-end d-grid align-content-center">
+          <div class="col-4 col-sm-6 text-end d-grid align-content-center">
             <h3 class="mb-0">{{ max.oneRepMax | number : "1.0-0" }}</h3>
             <small>1RM estimado</small>
           </div>
-          <div class="col">
-            <p class="mb-0">Peso utilizado: {{ max.weight }}</p>
-            <p>Repetições feitas: {{ max.repetition }}</p>
+          <div class="col-7 col-sm-6 d-grid align-content-center px-1">
+            <span class="mb-0">Peso utilizado: {{ max.weight }}</span>
+            <span>Rep. feitas: {{ max.repetition }}</span>
           </div>
         </div>
       </div>
